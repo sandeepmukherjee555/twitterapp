@@ -18,10 +18,20 @@ function Twitter() {
             createdAt: new Date()
         }])
     }
+    const handleEditTweet = (tweet) => {
+        setTweets(tweets.map((currentTweet) => {
+            if (currentTweet.id === tweet.id) {
+                return tweet;
+            }
+            else {
+                return currentTweet;
+            }
+        }))
+    }
     return (
         <>
             <AddTweet onAddTweet={handleAddTweet} />
-            <TweetList tweets={tweets} />
+            <TweetList tweets={tweets} onEditTweet={handleEditTweet} />
         </>
     );
 }
