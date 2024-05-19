@@ -5,10 +5,16 @@
     font-size: larger;
 }
 
-.likes {
+.likes,
+.created-at {
     font-size: xx-small;
 }
 
 .tweet-content {
     margin-bottom: 1rem;
+}
+
+.like-createdAt-wrapper {
+    display: flex;
+    justify-content: space-between;
 }

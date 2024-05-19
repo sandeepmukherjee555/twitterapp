@@ -4,8 +4,8 @@ function TweetList({ tweets }) {
     return (
         <ul className="tweet-list">
             {tweets.map((tweet) => (
-                <li class="tweet-like-wrapper">
-                    <Tweet content={tweet.content} likeCount={tweet.likeCount} />
+                <li className="tweet-like-wrapper" key={tweet.id}>
+                    <Tweet content={tweet.content} likeCount={tweet.likeCount} createdAt={tweet.createdAt.toString()} />
                 </li>
             ))}
         </ul>
